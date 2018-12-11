@@ -131,7 +131,7 @@ class Pool(object):
             return c
 
     def release(self, c):
-        """Release connection from unuse_list to inuse_list"""
+        """Release connection from inuse_list to unuse_list"""
         with self.lock:
             self.current_size -= 1
             self.inuse_list.remove(c)
