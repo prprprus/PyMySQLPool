@@ -2,7 +2,13 @@ import pymysql
 from threading import Thread, Lock, Condition, Timer
 
 
-class PoolTimeoutError(Exception):
+class Error(Exception):
+    """Base class for all pool-related exceptions"""
+    pass
+
+
+class TimeoutError(Error):
+    """The operation exceeded the given deadline"""
     pass
 
 
