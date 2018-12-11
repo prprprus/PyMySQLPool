@@ -49,8 +49,8 @@ class Pool(object):
     :param accumulation: Statiscal result
     """
 
-    def __init__(self, host='10.211.55.25', port=3306, user='root',
-                 password='hzz2956195', db='test', charset='utf8',
+    def __init__(self, host='localhost', port=3306, user='root',
+                 password=None, db=None, charset='utf8',
                  min_size=1, max_size=1, timeout=10.0,
                  interval=600.0, stati_num=3, multiple=4,
                  counter=0, accumulation=0):
