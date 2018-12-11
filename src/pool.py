@@ -142,7 +142,6 @@ class Pool(object):
             self.current_size -= 1
             self.inuse_list.remove(c)
             self.unuse_list.add(c)
-            # notify
             self.cond.notify_all()
 
     def destroy(self):

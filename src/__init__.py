@@ -3,4 +3,4 @@
 
 __author__ = 'Tiger huangzongzhuan@gmail.com'
 
-name = 'pymysql-pool'
+name = 'PyMySQLPool'

@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import MagicMock
-import uiauto
+from PyMySQLPool.src import pool
 
 
 class TestPool(unittest.TestCase):
