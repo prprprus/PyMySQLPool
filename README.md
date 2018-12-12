@@ -1,6 +1,6 @@
 ## PyMySQLPool
 
-[![license](https://img.shields.io/dub/l/vibe-d.svg)](./LICENSE)
+[![build status](https://travis-ci.org/zongzhenh/PyMySQLPool.svg?branch=master)](hhttps://travis-ci.org/zongzhenh/PyMySQLPool.svg?branch=master) [![license](https://img.shields.io/dub/l/vibe-d.svg)](./LICENSE)
 
 PyMySQLPool is a pymysql-based database connection pool, simple and lightweight.
 
@@ -98,4 +98,3 @@ PyMySQLPool is released under the MIT License. See LICENSE for more information.
 Thank you for your interest in contribution of PyMySQLPool, your help and contribution is very valuable. 
 
 You can submit issue and pull requests, please submit an issue before submitting pull requests.
-
