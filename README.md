@@ -29,7 +29,15 @@ Table of content
 
 ### Installation
 
+Package is uploaded on [PyPI](https://github.com/zongzhenh/PyMySQLPool/blob/master/README.md#pymysqlpool)
+
+You can install with pip
+
+`$ python3 -m pip install PyMySQLPool`
+
 ### Example
+
+
 
 ### Resources
 
