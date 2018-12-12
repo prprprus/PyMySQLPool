@@ -6,8 +6,6 @@ python:
   - "3.6"
   - "3.6-dev"  # 3.6 development branch
   - "3.7-dev"  # 3.7 development branch
-virtualenv:
-  system_site_packages: true
 env:
   - CODECOV_TOKEN="e57b350a-75fb-40fd-964a-9c0e85dfa0ff"
 before_install:
