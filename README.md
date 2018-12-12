@@ -8,6 +8,7 @@ Table of content
 - [Requirements](https://github.com/zongzhenh/PyMySQLPool/blob/master/README.md#requirements)
 - [Installation](https://github.com/zongzhenh/PyMySQLPool/blob/master/README.md#installation)
 - [Example](https://github.com/zongzhenh/PyMySQLPool/blob/master/README.md#example)
+- [Roadmap](https://github.com/zongzhenh/PyMySQLPool/blob/master/README.md#roadmap)
 - [Resources](https://github.com/zongzhenh/PyMySQLPool/blob/master/README.md#resources)
 - [License](https://github.com/zongzhenh/PyMySQLPool/blob/master/README.md#license)
 - [Contributing](https://github.com/zongzhenh/PyMySQLPool/blob/master/README.md#contributing)
