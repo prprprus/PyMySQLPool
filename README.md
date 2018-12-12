@@ -39,7 +39,7 @@ $ python3 -m pip install PyMySQLPool
 
 ### Example
 
-Make use of a simple table ([Example in MySQL doc](https://dev.mysql.com/doc/refman/8.0/en/creating-tables.html))
+Make use of a simple table (Example in [MySQL doc](https://dev.mysql.com/doc/refman/8.0/en/creating-tables.html))
 
 ```
 mysql> CREATE TABLE pet (name VARCHAR(20), owner VARCHAR(20),
