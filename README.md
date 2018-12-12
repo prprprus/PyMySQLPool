@@ -59,7 +59,7 @@ pool.init()
 
 connection = pool.get_conn()
 cur = connection.cursor()
-cur.execute(sql, *args)
+cur.execute('SELECT * FROM `pet` WHERE `name`=%s', args=('Puffball', ))
 print(cur.fetchone())
 
 pool.release(connection)
