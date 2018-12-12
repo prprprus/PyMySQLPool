@@ -32,7 +32,7 @@ Table of content
 
 ### Installation
 
-Package is uploaded on [PyPI](https://github.com/zongzhenh/PyMySQLPool/blob/master/README.md#pymysqlpool)
+Package is uploaded on [PyPI](https://pypi.org/project/pymysql-pooling/)
 
 You can install with pip
 
