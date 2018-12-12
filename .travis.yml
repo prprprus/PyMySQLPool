@@ -10,10 +10,10 @@ virtualenv:
   - CODECOV_TOKEN: "e57b350a-75fb-40fd-964a-9c0e85dfa0ff"
 install:
   - pip install -r requirements.txt
-  - pip install codecov
+  # - pip install codecov
 script:
   # - cd test
   - ls
   # - python3 test_pool.py
-after_success:
-  - codecov
+# after_success:
+#   - codecov
