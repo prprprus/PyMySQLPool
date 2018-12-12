@@ -10,4 +10,7 @@ python:
 install:
   - pip install -r requirements.txt
 script:
+  - cd test
   - ls
+  - python2.7 test_pool.py
+  - python3.7 test_pool.py
