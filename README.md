@@ -39,7 +39,30 @@ $ python3 -m pip install PyMySQLPool
 
 ### Example
 
+Make use of a simple table ([Example in MySQL doc](https://dev.mysql.com/doc/refman/8.0/en/creating-tables.html))
 
+```
+mysql> CREATE TABLE pet (name VARCHAR(20), owner VARCHAR(20),
+    -> species VARCHAR(20), sex CHAR(1), birth DATE, death DATE);
+
+mysql> INSERT INTO pet
+    -> VALUES ('Puffball','Diane','hamster','f','1999-03-30',NULL);
+```
+
+```
+from pool import Pool
+
+
+pool = Pool(min_size=10, max_size=90, timeout=10.0, interval=3.0)
+pool.init()
+
+connection = pool.get_conn()
+cur = connection.cursor()
+cur.execute(sql, *args)
+print(cur.fetchone())
+
+pool.release(connection)
+```
 
 ### Resources
 
