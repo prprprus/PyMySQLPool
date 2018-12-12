@@ -12,7 +12,7 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/zongzhenh/pymysql-pool",
-    packages=setuptools.find_packages(exclude=['tests*', ]),
+    packages=setuptools.find_packages(),
     install_requires=[
         'PyMySQL',
     ],

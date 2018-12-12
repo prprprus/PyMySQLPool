@@ -10,6 +10,9 @@ virtualenv:
   system_site_packages: true
 env:
   - CODECOV_TOKEN="e57b350a-75fb-40fd-964a-9c0e85dfa0ff"
+before_install:
+  - "pip install -U pip"
+  - "python setup.py install"
 install:
   - pip install -r requirements.txt
   - pip install codecov
