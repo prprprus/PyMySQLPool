@@ -25,7 +25,7 @@ Table of content
 - MySQL Server -- one of the following:
     - MySQL >= 5.5
     - MariaDB >= 5.5
-- pymysql: >= 0.94
+- PyMySQL: >= 0.94
 
 ### Installation
 
@@ -69,4 +69,9 @@ That's all.
 
 ### Resources
 
+- [PyMySQL Documenation](https://pymysql.readthedocs.io/en/latest/index.html)
+- [MySQL Reference Manuals](https://dev.mysql.com/doc/refman/8.0/en/)
+
 ### License
+
+PyMySQLPool is released under the MIT License. See LICENSE for more information.
