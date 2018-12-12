@@ -33,7 +33,9 @@ Package is uploaded on [PyPI](https://github.com/zongzhenh/PyMySQLPool/blob/mast
 
 You can install with pip
 
-`$ python3 -m pip install PyMySQLPool`
+```
+$ python3 -m pip install PyMySQLPool
+```
 
 ### Example
 
