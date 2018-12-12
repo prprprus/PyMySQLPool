@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="PyMySQLPool_zongzhenh",
+    name="pymysql-pooling",
     version="0.9.1",
     author="Tiger",
     author_email="huangzongzhuan@gmail.com",
