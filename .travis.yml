@@ -10,7 +10,7 @@ virtualenv:
   CODECOV_TOKEN: "e57b350a-75fb-40fd-964a-9c0e85dfa0ff"
 install:
   - pip install -r requirements.txt
-  - pip install --user codecov
+  - pip install codecov
 script:
   # - cd test
   - ls
