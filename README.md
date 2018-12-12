@@ -1,6 +1,6 @@
 ## PyMySQLPool
 
-[![license]](https://img.shields.io/dub/l/vibe-d.svg)
+[![license](https://img.shields.io/dub/l/vibe-d.svg)](./LICENSE)
 
 PyMySQLPool is a pymysql-based database connection pool, simple and lightweight.
 
