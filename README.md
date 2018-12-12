@@ -4,12 +4,12 @@ A pymysql-based database connection pool, simple and lightweight.
 
 Table of content
 
-- Features
-- Requirements
-- Installation
-- Example
-- Resources
-- License
+- [Features](https://github.com/zongzhenh/PyMySQLPool#features)
+- [Requirements](https://github.com/zongzhenh/PyMySQLPool/blob/master/README.md#requirements)
+- [Installation](https://github.com/zongzhenh/PyMySQLPool/blob/master/README.md#installation)
+- [Example](https://github.com/zongzhenh/PyMySQLPool/blob/master/README.md#example)
+- [Resources](https://github.com/zongzhenh/PyMySQLPool/blob/master/README.md#resources)
+- [License](https://github.com/zongzhenh/PyMySQLPool/blob/master/README.md#license)
 
 ### Features
 
