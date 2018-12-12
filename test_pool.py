@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import patch
-from PyMySQLPool.src import pool
+from PyMySQLPool import pool
 from threading import Thread
 
 
