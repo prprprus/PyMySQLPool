@@ -10,6 +10,7 @@ Table of content
 - [Example](https://github.com/zongzhenh/PyMySQLPool/blob/master/README.md#example)
 - [Resources](https://github.com/zongzhenh/PyMySQLPool/blob/master/README.md#resources)
 - [License](https://github.com/zongzhenh/PyMySQLPool/blob/master/README.md#license)
+- [Contributing](https://github.com/zongzhenh/PyMySQLPool/blob/master/README.md#contributing)
 
 ### Features
 
