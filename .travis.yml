@@ -6,7 +6,8 @@ python:
   - "3.6"
   - "3.6-dev"
   - "3.7-dev"
-  - "3.7_with_system_site_packages"
+virtualenv:
+    system_site_packages: true
 env:
   - CODECOV_TOKEN="e57b350a-75fb-40fd-964a-9c0e85dfa0ff"
 before_install:
