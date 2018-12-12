@@ -1,6 +1,6 @@
 ## PyMySQLPool
 
-A pymysql-based database connection pool, simple and lightweight.
+PyMySQLPool is a pymysql-based database connection pool, simple and lightweight.
 
 Table of content
 
