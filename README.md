@@ -65,6 +65,12 @@ print(cur.fetchone())
 pool.release(connection)
 ```
 
+This example will print:
+
+```
+('Puffball', 'Diane', 'hamster', 'f', datetime.date(1999, 3, 30), None)
+```
+
 That's all.
 
 ### Resources
