@@ -2,5 +2,3 @@
 # Licensed to MIT under a Contributor Agreement.
 
 __author__ = 'Tiger huangzongzhuan@gmail.com'
-
-name = 'PyMySQLPool'
