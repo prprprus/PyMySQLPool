@@ -13,6 +13,6 @@ install:
   - pip install codecov
 script:
   - ls
-  - coverage run test/tests_pool.py
+  - coverage run test/test_pool.py
 after_success:
   - codecov
