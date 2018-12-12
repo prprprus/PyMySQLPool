@@ -1,6 +1,6 @@
 ## PyMySQLPool
 
-[![build status](https://travis-ci.org/zongzhenh/PyMySQLPool.svg?branch=master)](hhttps://travis-ci.org/zongzhenh/PyMySQLPool.svg?branch=master) [![codecov](https://codecov.io/gh/zongzhenh/PyMySQLPool/branch/master/graph/badge.svg)](https://codecov.io/gh/zongzhenh/PyMySQLPool) [![pip version](https://img.shields.io/badge/pip-v18.1-blue.svg)] [![license](https://img.shields.io/dub/l/vibe-d.svg)](./LICENSE)
+[![build status](https://travis-ci.org/zongzhenh/PyMySQLPool.svg?branch=master)](hhttps://travis-ci.org/zongzhenh/PyMySQLPool.svg?branch=master) [![codecov](https://codecov.io/gh/zongzhenh/PyMySQLPool/branch/master/graph/badge.svg)](https://codecov.io/gh/zongzhenh/PyMySQLPool) [![pip version](https://img.shields.io/badge/pip-v18.1-blue.svg)](https://img.shields.io/badge/pip-v18.1-blue.svg) [![license](https://img.shields.io/dub/l/vibe-d.svg)](./LICENSE)
 
 PyMySQLPool is a pymysql-based database connection pool, simple and lightweight.
 
