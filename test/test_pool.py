@@ -47,13 +47,18 @@ class TestPool(unittest.TestCase):
         pass
 
     @patch.object(pool.Pool, 'create_conn', new=mock_create_conn)
+    def test_create_conn(self):
+        assert (mock_create_conn == pool.Pool.create_conn)
+        self.p.create_conn()
+        assert (len(self.p.unuse_list) == 1)
+        assert (filter(lambda x: isinstance(x, MockMySQLConnection), self.p.unuse_list))
+
+    @patch.object(pool.Pool, 'create_conn', new=mock_create_conn)
     @patch.object(pool.Pool, '_init_pool', new=mock__init_pool)
     @patch.object(pool.Pool, '_start', new=mock__start)
     def test_init(self):
-        # assert (mock_init == pool.Pool.init)
         self.p.init()
         assert (len(self.p.unuse_list) == self.p.min_size)
-        assert (filter(lambda x: isinstance(x, MockMySQLConnection), self.p.unuse_list))
 
     @patch.object(pool.Pool, 'create_conn', new=mock_create_conn)
     @patch.object(pool.Pool, '_init_pool', new=mock__init_pool)
@@ -82,6 +87,7 @@ class TestPool(unittest.TestCase):
     @patch.object(pool.Pool, '_start', new=mock__start)
     def test_destroy(self):
         self.p.init()
+        self.p.inuse_list.add(MockMySQLConnection())
         self.p.destroy()
         assert (len(self.p.unuse_list) == 0)
         assert (len(self.p.inuse_list) == 0)
@@ -101,25 +107,10 @@ class TestPool(unittest.TestCase):
         for i in range(self.concurrence):
             t = Thread(target=self.pure_get_and_release)
             t.start()
-
         assert (len(self.p.unuse_list) == self.p.min_size)
         assert (len(self.p.inuse_list) == 0)
         assert (filter(lambda x: isinstance(x, MockMySQLConnection), self.p.unuse_list))
 
-    def test_x(self):
-        # print(self.p)
-        # print(self.p.min_size)
-        # print(self.p.max_size)
-        # print(self.p.timeout)
-        pass
-
-        print('---------')
-        print(self.p.unuse_list)
-        print(self.p.inuse_list)
-        print(len(self.p.unuse_list))
-        print(len(self.p.inuse_list))
-        print('---------')
-
 
 if __name__ == '__main__':
-    unittest.main(verbosity=1)
+    unittest.main(verbosity=2)
