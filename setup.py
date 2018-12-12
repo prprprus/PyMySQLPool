@@ -4,8 +4,8 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="pymysql-pool",
-    version="1.0.0",
+    name="PyMySQLPool",
+    version="0.5.0",
     author="Tiger",
     author_email="huangzongzhuan@gmail.com",
     description="Simple connection pool for pymysql",
