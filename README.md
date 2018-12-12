@@ -28,7 +28,7 @@ Table of content
 - MySQL Server -- one of the following:
     - MySQL >= 5.5
     - MariaDB >= 5.5
-- PyMySQL: >= 0.94
+- PyMySQL: >= 0.9.2
 
 ### Installation
 
