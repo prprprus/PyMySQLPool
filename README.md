@@ -53,7 +53,7 @@ mysql> INSERT INTO pet
 ```
 
 ```python
-from pool import Pool
+from pymysqlpool.pool import Pool
 
 
 pool = Pool(host='YOUR_HOST', port='YOUR_PORT', user='YOUR_USER', password='YOUR_PASSWORD',
