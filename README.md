@@ -1,5 +1,7 @@
 ## PyMySQLPool
 
+A pymysql-based database connection pool, simple and lightweight.
+
 Table of content
 
 - Requirements
@@ -8,3 +10,4 @@ Table of content
 - Example
 - Resources
 - License
+
