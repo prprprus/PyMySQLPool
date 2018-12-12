@@ -14,6 +14,5 @@ install:
 script:
   - ls
   - coverage run test/tests_pool.py
-  # - python3 test_pool.py
 after_success:
   - codecov
