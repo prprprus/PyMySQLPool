@@ -53,7 +53,7 @@ mysql> INSERT INTO pet
 from pool import Pool
 
 
-pool = Pool(min_size=10, max_size=90, timeout=10.0, interval=3.0)
+pool = Pool(host='localhost', port=3306, user='default', password='default', db='default',min_size=10, max_size=90)
 pool.init()
 
 connection = pool.get_conn()
