@@ -1,6 +1,5 @@
 language: python
 python:
-  - "2.7"
   - "3.4"
   - "3.5"
   - "3.5-dev"  # 3.5 development branch
@@ -12,5 +11,4 @@ install:
 script:
   - cd test
   - ls
-  - python2.7 test_pool.py
-  - python3.7 test_pool.py
+  - python3 test_pool.py

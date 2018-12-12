@@ -24,7 +24,7 @@ Table of content
 ### Requirements
 
 - Python -- one of the following:
-    - CPython : 2.7 and >= 3.4
+    - CPython : >= 3.4
     - PyPy : Latest version
 - MySQL Server -- one of the following:
     - MySQL >= 5.5
