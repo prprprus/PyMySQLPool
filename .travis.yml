@@ -12,8 +12,7 @@ env:
   - CODECOV_TOKEN="e57b350a-75fb-40fd-964a-9c0e85dfa0ff"
 before_install:
   - "pip install -U pip"
-  - "python setup.py install"
-  - "python3 setup.py install"
+  - "export PYTHONPATH=$PYTHONPATH:$(pwd)"
 install:
   - pip install -r requirements.txt
   - pip install codecov
