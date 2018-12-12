@@ -74,6 +74,13 @@ This example will print:
 
 That's all.
 
+### Roadmap
+
++ [x] Connection Pool
++ [x] Dynamically Create
++ [x] Dynamically Release
++ [ ] Monitor Web Interface
+
 ### Resources
 
 - [PyMySQL Documenation](https://pymysql.readthedocs.io/en/latest/index.html)
