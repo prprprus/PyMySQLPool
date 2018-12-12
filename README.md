@@ -41,7 +41,7 @@ $ python3 -m pip install PyMySQLPool
 
 Make use of a simple table (Example in [MySQL doc](https://dev.mysql.com/doc/refman/8.0/en/creating-tables.html))
 
-```
+```mysql
 mysql> CREATE TABLE pet (name VARCHAR(20), owner VARCHAR(20),
     -> species VARCHAR(20), sex CHAR(1), birth DATE, death DATE);
 
@@ -49,7 +49,7 @@ mysql> INSERT INTO pet
     -> VALUES ('Puffball','Diane','hamster','f','1999-03-30',NULL);
 ```
 
-```
+```python
 from pool import Pool
 
 
