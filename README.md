@@ -65,6 +65,8 @@ print(cur.fetchone())
 pool.release(connection)
 ```
 
+That's all.
+
 ### Resources
 
 ### License
