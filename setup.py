@@ -13,6 +13,9 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/zongzhenh/pymysql-pool",
     packages=setuptools.find_packages(exclude=['tests*', ]),
+    install_requires=[
+        'PyMySQL',
+    ],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
