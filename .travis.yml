@@ -13,4 +13,4 @@ python:
 #   - pip install -r ./requirements.txt
 script:
   - pwd
-  - python3 -c "print(ok)"
+  - ls
