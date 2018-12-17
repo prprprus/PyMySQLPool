@@ -117,7 +117,7 @@ class Pool(object):
         return len(self.unuse_list) > 0
 
     def get_conn(self):
-        with self.lock:
+        with self.cond:
             # Lack of resources and wait
             if len(self.unuse_list) <= 0 and \
                     self.current_size >= self.max_size:
@@ -138,7 +138,7 @@ class Pool(object):
 
     def release(self, c):
         """Release connection from inuse_list to unuse_list"""
-        with self.lock:
+        with self.cond:
             self.current_size -= 1
             self.inuse_list.remove(c)
             self.unuse_list.add(c)
