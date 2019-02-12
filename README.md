@@ -1,4 +1,4 @@
-## PyMySQLPool
+# PyMySQLPool
 
 [![build status](https://travis-ci.org/zongzhenh/PyMySQLPool.svg?branch=master)](hhttps://travis-ci.org/zongzhenh/PyMySQLPool.svg?branch=master) [![codecov](https://codecov.io/gh/zongzhenh/PyMySQLPool/branch/master/graph/badge.svg)](https://codecov.io/gh/zongzhenh/PyMySQLPool) [![pip version](https://img.shields.io/badge/pip-v18.1-blue.svg)](https://img.shields.io/badge/pip-v18.1-blue.svg) [![license](https://img.shields.io/dub/l/vibe-d.svg)](./LICENSE)
 
@@ -15,22 +15,22 @@ Table of content
 - [License](https://github.com/zongzhenh/PyMySQLPool/blob/master/README.md#license)
 - [Contributing](https://github.com/zongzhenh/PyMySQLPool/blob/master/README.md#contributing)
 
-### Features
+## Features
 
 - Maintain a minimum number of connection pools by default.
 - If number of unuse connections less than zero, dynamically add connections to pool until current number of inuse connections equal maximum of pool.
 - Release the idle connections in regular until number of unuse connections equal minimum of pool.
 
-### Requirements
+## Requirements
 
-- Python -- one of the following:
+- Python
     - CPython : >= 3.4
 - MySQL Server -- one of the following:
     - MySQL >= 5.5
     - MariaDB >= 5.5
 - PyMySQL: >= 0.9.2
 
-### Installation
+## Installation
 
 Package is uploaded on [PyPI](https://pypi.org/project/pymysql-pooling/)
 
@@ -40,7 +40,7 @@ You can install with pip
 $ pip install pymysql-pooling
 ```
 
-### Example
+## Example
 
 Make use of a simple table (Example in [MySQL doc](https://dev.mysql.com/doc/refman/8.0/en/creating-tables.html))
 
@@ -76,7 +76,7 @@ This example will print:
 
 That's all.
 
-### Roadmap
+## Roadmap
 
 + [x] Connection Pool
 + [x] Dynamically Create
@@ -88,7 +88,7 @@ That's all.
 - [PyMySQL Documenation](https://pymysql.readthedocs.io/en/latest/index.html)
 - [MySQL Reference Manuals](https://dev.mysql.com/doc/refman/8.0/en/)
 
-### License
+## License
 
 PyMySQLPool is released under the MIT License. See LICENSE for more information.
 
