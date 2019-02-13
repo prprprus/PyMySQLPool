@@ -5,13 +5,13 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pymysql-pooling",
-    version="0.9.5",
-    author="Tiger",
+    version="0.9.7",
+    author="prprprus",
     author_email="huangzongzhuan@gmail.com",
     description="pymysql-based database connection pool",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/zongzhenh/pymysql-pool",
+    url="https://github.com/prprprus/PyMySQLPool",
     packages=setuptools.find_packages(),
     install_requires=[
         'PyMySQL',
