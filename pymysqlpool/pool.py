@@ -44,7 +44,8 @@ class Pool(object):
     :param user: User of MySQL server
     :param password: Password of MySQL server
     :param db: Database of MySQL server
-    :param charset: Charset of MySQL server
+    :param charset: Class of MySQL Cursor
+    :param cursorclass: Charset of MySQL server
     :param min_size: Minimum size of connection pool
     :param max_size: Maximum size of connection pool
     :param timeout: Watting time in the multi-thread environment
@@ -56,7 +57,7 @@ class Pool(object):
     """
 
     def __init__(self, host='localhost', port=3306, user='root',
-                 password=None, db=None, charset='utf8',
+                 password=None, db=None, charset='utf8', cursorclass=pymysql.cursors.DictCursor, 
                  min_size=1, max_size=1, timeout=10.0,
                  interval=600.0, stati_num=3, multiple=4,
                  counter=0, accumulation=0):
@@ -66,6 +67,7 @@ class Pool(object):
         self.password = password
         self.db = db
         self.charset = charset
+        self.cursorclass = cursorclass
 
         self.min_size = min_size
         self.max_size = max_size
@@ -91,7 +93,8 @@ class Pool(object):
             user=self.user,
             password=self.password,
             db=self.db,
-            charset=self.charset
+            charset=self.charset,
+            cursorclass=self.cursorclass
         )
         self.unuse_list.add(c)
 
