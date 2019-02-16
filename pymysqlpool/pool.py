@@ -44,8 +44,8 @@ class Pool(object):
     :param user: User of MySQL server
     :param password: Password of MySQL server
     :param db: Database of MySQL server
-    :param charset: Class of MySQL Cursor
-    :param cursorclass: Charset of MySQL server
+    :param charset: Charset of MySQL server
+    :param cursorclass: Class of MySQL Cursor
     :param min_size: Minimum size of connection pool
     :param max_size: Maximum size of connection pool
     :param timeout: Watting time in the multi-thread environment
