@@ -57,7 +57,8 @@ class Pool(object):
     """
 
     def __init__(self, host='localhost', port=3306, user='root',
-                 password=None, db=None, charset='utf8', cursorclass=pymysql.cursors.DictCursor, 
+                 password=None, db=None, charset='utf8',
+                 cursorclass=pymysql.cursors.DictCursor,
                  min_size=1, max_size=1, timeout=10.0,
                  interval=600.0, stati_num=3, multiple=4,
                  counter=0, accumulation=0):
