@@ -10,6 +10,7 @@ Table of content
 - [Requirements](https://github.com/zongzhenh/PyMySQLPool/blob/master/README.md#requirements)
 - [Installation](https://github.com/zongzhenh/PyMySQLPool/blob/master/README.md#installation)
 - [Example](https://github.com/zongzhenh/PyMySQLPool/blob/master/README.md#example)
+- [Parameters](https://github.com/zongzhenh/PyMySQLPool/blob/master/README.md#parameters)
 - [Roadmap](https://github.com/zongzhenh/PyMySQLPool/blob/master/README.md#roadmap)
 - [Resources](https://github.com/zongzhenh/PyMySQLPool/blob/master/README.md#resources)
 - [License](https://github.com/zongzhenh/PyMySQLPool/blob/master/README.md#license)
@@ -49,20 +50,19 @@ mysql> CREATE TABLE pet (name VARCHAR(20), owner VARCHAR(20),
     -> species VARCHAR(20), sex CHAR(1), birth DATE, death DATE);
 
 mysql> INSERT INTO pet
-    -> VALUES ('Puffball','Diane','hamster','f','1999-03-30',NULL);
+    -> VALUES ("Puffball", "Diane", "hamster", "f", "1999-03-30", NULL);
 ```
 
 ```python
 from pymysqlpool.pool import Pool
 
 
-pool = Pool(host='YOUR_HOST', port='YOUR_PORT', user='YOUR_USER', password='YOUR_PASSWORD',
-            db='YOUR_DB', min_size=10, max_size=90)
+pool = Pool(host=HOST, port=PORT, user=USER, password=PASSWORD, db=DB)
 pool.init()
 
 connection = pool.get_conn()
 cur = connection.cursor()
-cur.execute('SELECT * FROM `pet` WHERE `name`=%s', args=('Puffball', ))
+cur.execute('SELECT * FROM `pet` WHERE `name`=%s', args=("Puffball", ))
 print(cur.fetchone())
 
 pool.release(connection)
@@ -74,7 +74,32 @@ This example will print:
 ('Puffball', 'Diane', 'hamster', 'f', datetime.date(1999, 3, 30), None)
 ```
 
+Support auto-commit mode, as following:
+
+```python
+pool = Pool(host=HOST, port=PORT, user=USER, password=PASSWORD, db=DB, autocommit=True)
+```
+
 That's all.
+
+## Parameters for the pool initial:
+
+`host`: Host of MySQL server
+`port`: Port of MySQL server
+`user`: User of MySQL server
+`password`: Password of MySQL server
+`db`: Database of MySQL server
+`charset`: Charset of MySQL server
+`cursorclass`: Class of MySQL Cursor
+`autocommit`: auto commit mode
+`min_size`: Minimum size of connection pool
+`max_size`: Maximum size of connection pool
+`timeout`: Watting time in the multi-thread environment
+`interval`: Statistical cycle time
+`stati_mun`: Statistical frequency
+`multiple`: Regulation standard
+`counter`: Counter
+`accumulation`: Statiscal result
 
 ## Roadmap
 
@@ -83,7 +108,7 @@ That's all.
 + [x] Dynamically Release
 + [ ] Monitor Web Interface
 
-### Resources
+## Resources
 
 - [PyMySQL Documenation](https://pymysql.readthedocs.io/en/latest/index.html)
 - [MySQL Reference Manuals](https://dev.mysql.com/doc/refman/8.0/en/)
