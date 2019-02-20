@@ -84,22 +84,22 @@ That's all.
 
 ## Parameters for the pool initial:
 
-`host`: Host of MySQL server
-`port`: Port of MySQL server
-`user`: User of MySQL server
-`password`: Password of MySQL server
-`db`: Database of MySQL server
-`charset`: Charset of MySQL server
-`cursorclass`: Class of MySQL Cursor
-`autocommit`: auto commit mode
-`min_size`: Minimum size of connection pool
-`max_size`: Maximum size of connection pool
-`timeout`: Watting time in the multi-thread environment
-`interval`: Statistical cycle time
-`stati_mun`: Statistical frequency
-`multiple`: Regulation standard
-`counter`: Counter
-`accumulation`: Statiscal result
+- `host`: Host of MySQL server
+- `port`: Port of MySQL server
+- `user`: User of MySQL server
+- `password`: Password of MySQL server
+- `db`: Database of MySQL server
+- `charset`: Charset of MySQL server
+- `cursorclass`: Class of MySQL Cursor
+- `autocommit`: auto commit mode
+- `min_size`: Minimum size of connection pool
+- `max_size`: Maximum size of connection pool
+- `timeout`: Watting time in the multi-thread environment
+- `interval`: Statistical cycle time
+- `stati_mun`: Statistical frequency
+- `multiple`: Regulation standard
+- `counter`: Counter
+- `accumulation`: Statiscal result
 
 ## Roadmap
 
