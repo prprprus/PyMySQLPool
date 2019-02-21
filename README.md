@@ -123,4 +123,4 @@ Thank you for your interest in contribution of PyMySQLPool, your help and contri
 
 You can submit issue and pull requests, please submit an issue before submitting pull requests.
 
-At last if the project is helpful to you, please click a star, thank you so much.
+At last if the project is helpful to you, please click a star, thank you so much.😃
