@@ -84,22 +84,22 @@ That's all.
 
 ## Parameters for the pool initial:
 
-- `host`: Host of MySQL server
-- `port`: Port of MySQL server
-- `user`: User of MySQL server
-- `password`: Password of MySQL server
-- `db`: Database of MySQL server
-- `charset`: Charset of MySQL server
-- `cursorclass`: Class of MySQL Cursor
-- `autocommit`: auto commit mode
-- `min_size`: Minimum size of connection pool
-- `max_size`: Maximum size of connection pool
-- `timeout`: Watting time in the multi-thread environment
-- `interval`: Statistical cycle time
-- `stati_mun`: Statistical frequency
-- `multiple`: Regulation standard
-- `counter`: Counter
-- `accumulation`: Statiscal result
+- `host`: Host of MySQL server, default for localhost
+- `port`: Port of MySQL server, default for 3306
+- `user`: User of MySQL server, default for None
+- `password`: Password of MySQL server, default for None
+- `db`: Database of MySQL server, default for None
+- `charset`: Charset of MySQL server, default for utf8
+- `cursorclass`: Class of MySQL Cursor, default for pymysql.cursors.DictCursor
+- `autocommit`: auto commit mode, default for False
+- `min_size`: Minimum size of connection pool, default for 1
+- `max_size`: Maximum size of connection pool, default for 3
+- `timeout`: Watting time in the multi-thread environment, default for 10.0
+- `interval`: Statistical cycle time, default for 600.0
+- `stati_mun`: Statistical frequency, default for 3
+- `multiple`: Regulation standard, default for 4
+- `counter`: Counter, default for 0
+- `accumulation`: Statiscal result, default for 0
 
 ## Roadmap
 
@@ -122,3 +122,5 @@ PyMySQLPool is released under the MIT License. See LICENSE for more information.
 Thank you for your interest in contribution of PyMySQLPool, your help and contribution is very valuable. 
 
 You can submit issue and pull requests, please submit an issue before submitting pull requests.
+
+At last if the project is helpful to you, please click a star, thank you so much.
