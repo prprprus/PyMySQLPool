@@ -1,6 +1,6 @@
 # PyMySQLPool
 
-[![build status](https://travis-ci.org/prprprus/PyMySQLPool.svg?branch=master)](hhttps://travis-ci.org/zongzhenh/PyMySQLPool.svg?branch=master) [![codecov](https://codecov.io/gh/zongzhenh/PyMySQLPool/branch/master/graph/badge.svg)](https://codecov.io/gh/zongzhenh/PyMySQLPool) [![pip version](https://img.shields.io/badge/pip-v18.1-blue.svg)](https://img.shields.io/badge/pip-v18.1-blue.svg) [![license](https://img.shields.io/dub/l/vibe-d.svg)](./LICENSE)
+[![build status](https://travis-ci.org/prprprus/PyMySQLPool.svg?branch=master)](https://travis-ci.org/zongzhenh/PyMySQLPool.svg?branch=master) [![codecov](https://codecov.io/gh/zongzhenh/PyMySQLPool/branch/master/graph/badge.svg)](https://codecov.io/gh/zongzhenh/PyMySQLPool) [![pip version](https://img.shields.io/badge/pip-v18.1-blue.svg)](https://img.shields.io/badge/pip-v18.1-blue.svg) [![license](https://img.shields.io/dub/l/vibe-d.svg)](./LICENSE)
 
 PyMySQLPool is a pymysql-based database connection pool, simple and lightweight.
 
@@ -81,25 +81,6 @@ pool = Pool(host=HOST, port=PORT, user=USER, password=PASSWORD, db=DB, autocommi
 ```
 
 That's all.
-
-## Parameters for the pool initial:
-
-- `host`: Host of MySQL server, default for localhost
-- `port`: Port of MySQL server, default for 3306
-- `user`: User of MySQL server, default for None
-- `password`: Password of MySQL server, default for None
-- `db`: Database of MySQL server, default for None
-- `charset`: Charset of MySQL server, default for utf8
-- `cursorclass`: Class of MySQL Cursor, default for pymysql.cursors.DictCursor
-- `autocommit`: auto commit mode, default for False
-- `min_size`: Minimum size of connection pool, default for 1
-- `max_size`: Maximum size of connection pool, default for 3
-- `timeout`: Watting time in the multi-thread environment, default for 10.0
-- `interval`: Statistical cycle time, default for 600.0
-- `stati_mun`: Statistical frequency, default for 3
-- `multiple`: Regulation standard, default for 4
-- `counter`: Counter, default for 0
-- `accumulation`: Statiscal result, default for 0
 
 ## Roadmap
 
