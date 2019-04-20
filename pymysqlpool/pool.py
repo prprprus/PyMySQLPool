@@ -43,6 +43,7 @@ class Pool(object):
     :param port: Port of MySQL server
     :param user: User of MySQL server
     :param password: Password of MySQL server
+    :param unix_socket: Optionally, you can use a unix socket rather than TCP/IP.
     :param db: Database of MySQL server
     :param charset: Charset of MySQL server
     :param cursorclass: Class of MySQL Cursor
@@ -62,6 +63,7 @@ class Pool(object):
                  port=3306,
                  user=None,
                  password=None,
+                 unix_socket=None,
                  db=None,
                  charset="utf8",
                  cursorclass=pymysql.cursors.DictCursor,
@@ -99,6 +101,8 @@ class Pool(object):
         self.counter = 0
         self.accumulation = 0
 
+        self.unix_socket=unix_socket
+
     def create_conn(self):
         """Create mysql connection by pymysql and to add unuse_list"""
         c = pymysql.connect(
@@ -109,7 +113,8 @@ class Pool(object):
             db=self.db,
             charset=self.charset,
             cursorclass=self.cursorclass,
-            autocommit=self.autocommit
+            autocommit=self.autocommit,
+            unix_socket=self.unix_socket
         )
         self.unuse_list.add(c)
 
