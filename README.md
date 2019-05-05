@@ -103,5 +103,3 @@ PyMySQLPool is released under the MIT License. See LICENSE for more information.
 Thank you for your interest in contribution of PyMySQLPool, your help and contribution is very valuable. 
 
 You can submit issue and pull requests, please submit an issue before submitting pull requests.
-
-At last if the project is helpful to you, please click a star, thank you so much.😃
