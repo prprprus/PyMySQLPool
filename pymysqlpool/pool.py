@@ -1,4 +1,5 @@
 import pymysql
+from time import time
 from threading import Thread, Lock, Condition, Timer
 
 
@@ -56,6 +57,7 @@ class Pool(object):
     :param multiple: Regulation standard
     :param counter: Counter
     :param accumulation: Statiscal result
+    :param ping_check: Verify if the conn is healthy after some amount of seconds (or always, or never).
     """
 
     def __init__(self,
@@ -75,7 +77,8 @@ class Pool(object):
                  stati_num=3,
                  multiple=4,
                  counter=0,
-                 accumulation=0):
+                 accumulation=0,
+                 ping_check: (int, bool) = False):
         self.host = host
         self.port = port
         self.user = user
@@ -100,6 +103,7 @@ class Pool(object):
         self.multiple = multiple
         self.counter = 0
         self.accumulation = 0
+        self.ping_check = ping_check
 
         self.unix_socket=unix_socket
 
@@ -141,23 +145,43 @@ class Pool(object):
 
     def get_conn(self):
         with self.cond:
-            # Lack of resources and wait
-            if len(self.unuse_list) <= 0 and \
-                    self.current_size >= self.max_size:
-                # note: TimeoutError mean release operation exception
-                # or max_size much less than concurrence
-                self.cond.wait_for(self._wait, self.timeout)
-                if len(self.unuse_list) <= 0:
-                    raise TimeoutError
-            # Lack of resources but can created
-            if len(self.unuse_list) <= 0 and \
-                    self.current_size < self.max_size:
-                self.create_conn()
+            return self.__get_conn()
 
-            self.current_size += 1
-            c = self.unuse_list.pop()
-            self.inuse_list.add(c)
-            return c
+    def __get_conn(self, retry_count=0):
+        # Lack of resources and wait
+        if len(self.unuse_list) <= 0 and \
+                self.current_size >= self.max_size:
+            # note: TimeoutError mean release operation exception
+            # or max_size much less than concurrence
+            self.cond.wait_for(self._wait, self.timeout)
+            if len(self.unuse_list) <= 0:
+                raise TimeoutError
+        # Lack of resources but can created
+        if len(self.unuse_list) <= 0 and \
+                self.current_size < self.max_size:
+            self.create_conn()
+
+        return self.__get_safe_conn(retry_count)
+
+    def __get_safe_conn(self, retry_count):
+        self.current_size += 1
+        c = self.unuse_list.pop()
+        if self.ping_check:
+            now = int(time())
+            timeout = now
+            if isinstance(int, self.ping_check):
+                timeout = timeout - self.ping_check
+            if not hasattr(c, '__ping_check_timestamp'):
+                c.__ping_check_timestamp = now
+            try:
+                if c.__ping_check_timestamp < timeout:
+                    c.__ping_check_timestamp = now
+                    c.ping()
+            except:
+                self.current_size -= 1
+                if retry_count < 10: c = self.__get_conn(retry_count+1)
+        if c: self.inuse_list.add(c)
+        return c
 
     def release(self, c):
         """Release connection from inuse_list to unuse_list"""
