@@ -20,14 +20,16 @@ Table of content
 - Maintain a minimum number of connection pools by default.
 - If number of unuse connections less than zero, dynamically add connections to pool until current number of inuse connections equal maximum of pool.
 - Release the idle connections in regular until number of unuse connections equal minimum of pool.
+- Support autocommit mode.
+- Support for ping check to get healthy connections.
 
 ## Requirements
 
 - Python
-    - CPython : >= 3.4
+  - CPython : >= 3.4
 - MySQL Server -- one of the following:
-    - MySQL >= 5.5
-    - MariaDB >= 5.5
+  - MySQL >= 5.5
+  - MariaDB >= 5.5
 - PyMySQL: >= 0.9.2
 
 ## Installation
@@ -73,7 +75,7 @@ This example will print:
 ('Puffball', 'Diane', 'hamster', 'f', datetime.date(1999, 3, 30), None)
 ```
 
-Support auto-commit mode, as following:
+Support autocommit mode, as following:
 
 ```python
 pool = Pool(host=HOST, port=PORT, user=USER, password=PASSWORD, db=DB, autocommit=True)
@@ -83,10 +85,10 @@ That's all.
 
 ## Roadmap
 
-+ [x] Connection Pool
-+ [x] Dynamically Create
-+ [x] Dynamically Release
-+ [ ] Monitor Web Interface
+- [x] Connection Pool
+- [x] Dynamically Create
+- [x] Dynamically Release
+- [ ] Monitor Web Interface
 
 ## Resources
 
@@ -99,6 +101,6 @@ PyMySQLPool is released under the MIT License. See LICENSE for more information.
 
 ## Contributing
 
-Thank you for your interest in contribution of PyMySQLPool, your help and contribution is very valuable. 
+Thank you for your interest in contribution of PyMySQLPool, your help and contribution is very valuable.
 
 You can submit issue and pull requests, please submit an issue before submitting pull requests.
