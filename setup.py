@@ -5,9 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pymysql-pooling",
-    version="1.0.2",
-    author="prprprus",
-    author_email="huangzongzhuan@gmail.com",
+    version="1.0.3",
     description="pymysql-based database connection pool",
     long_description=long_description,
     long_description_content_type="text/markdown",
