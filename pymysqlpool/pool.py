@@ -169,7 +169,7 @@ class Pool(object):
         if self.ping_check:
             now = int(time())
             timeout = now
-            if isinstance(int, self.ping_check):
+            if isinstance(self.ping_check, int):
                 timeout = timeout - self.ping_check
             if not hasattr(c, '__ping_check_timestamp'):
                 c.__ping_check_timestamp = now
