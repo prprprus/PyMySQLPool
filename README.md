@@ -18,9 +18,9 @@ Table of content
 ## Features
 
 - Maintain a minimum number of connection pools by default.
-- If number of unuse connections less than zero, dynamically add connections to pool until current number of inuse connections equal maximum of pool.
-- Release the idle connections in regular until number of unuse connections equal minimum of pool.
-- Support autocommit mode.
+- If a number of unuse connections less than zero, dynamically add connections to pool until the current number of inuse connections equal maximum of the pool.
+- Release the idle connections in regular until a number of unuse connections equal minimum of the pool.
+- Support auto-commit mode.
 - Support for ping check to get healthy connections.
 
 ## Requirements
@@ -101,6 +101,6 @@ PyMySQLPool is released under the MIT License. See LICENSE for more information.
 
 ## Contributing
 
-Thank you for your interest in contribution of PyMySQLPool, your help and contribution is very valuable.
+Thank you for your interest in the contribution of PyMySQLPool, your help and contribution is very valuable.
 
-You can submit issue and pull requests, please submit an issue before submitting pull requests.
+You can submit an issue and pull requests, please submit an issue before submitting pull requests.
