@@ -183,6 +183,10 @@ class Pool(object):
         if c: self.inuse_list.add(c)
         return c
 
+    def get_pool_size(self):
+        """Get current pool size"""
+        return self.current_size
+
     def release(self, c):
         """Release connection from inuse_list to unuse_list"""
         with self.cond:
