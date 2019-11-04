@@ -78,7 +78,8 @@ class Pool(object):
                  multiple=4,
                  counter=0,
                  accumulation=0,
-                 ping_check: (int, bool) = False):
+                 ping_check: (int, bool) = False,
+                 **configs):
         self.host = host
         self.port = port
         self.user = user
@@ -106,6 +107,7 @@ class Pool(object):
         self.ping_check = ping_check
 
         self.unix_socket=unix_socket
+        self.configs=configs
 
     def create_conn(self):
         """Create mysql connection by pymysql and to add unuse_list"""
@@ -118,7 +120,8 @@ class Pool(object):
             charset=self.charset,
             cursorclass=self.cursorclass,
             autocommit=self.autocommit,
-            unix_socket=self.unix_socket
+            unix_socket=self.unix_socket,
+            **self.configs
         )
         self.unuse_list.add(c)
 
