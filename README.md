@@ -58,6 +58,7 @@ mysql> INSERT INTO pet
 from pymysqlpool.pool import Pool
 
 
+# Note: you can also add any parameters relates to `pymysql.connections.Connection` object
 pool = Pool(host=HOST, port=PORT, user=USER, password=PASSWORD, db=DB)
 pool.init()
 
