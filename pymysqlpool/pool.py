@@ -127,9 +127,11 @@ class Pool(object):
 
     def _start(self):
         """Start thread for resize pool"""
-        t = Thread(target=resize_pool, args=(self.interval, self.stati_num,
-                                             self.multiple, self.counter,
-                                             self.accumulation, self))
+        t = Thread(target=resize_pool,
+                   args=(self.interval, self.stati_num,
+                         self.multiple, self.counter,
+                         self.accumulation, self),
+                   daemon=True)
         t.start()
 
     def _init_pool(self):
